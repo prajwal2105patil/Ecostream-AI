@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Polyline, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { generateRoute } from "../../api/analyticsApi";
+
+// Fix Leaflet default marker icons broken in Vite
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+});
 
 const CITY_CENTERS = {
   Bangalore: [12.9716, 77.5946],
@@ -52,7 +64,7 @@ export default function RouteDisplay({ city = "Bangalore" }) {
       </div>
       {error && <div className="px-5 py-2 text-red-500 text-sm">{error}</div>}
       <div className="h-72">
-        <MapContainer center={center} zoom={12} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
+        <MapContainer key={`route-${city}`} center={center} zoom={12} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import { useAuth } from "../context/AuthContext";
 import WasteHeatmap from "../components/dashboard/WasteHeatmap";
 import TrendChart from "../components/dashboard/TrendChart";
@@ -8,6 +8,16 @@ import RouteDisplay from "../components/dashboard/RouteDisplay";
 import LoadingSpinner from "../components/shared/LoadingSpinner";
 import { getHeatmapData, getHeatmapSummary } from "../api/heatmapApi";
 import { getTrends, getCategories, getHotspots } from "../api/analyticsApi";
+
+class ErrorBoundary extends Component {
+  constructor(props) { super(props); this.state = { hasError: false, msg: "" }; }
+  static getDerivedStateFromError(e) { return { hasError: true, msg: e.message }; }
+  render() {
+    if (this.state.hasError)
+      return <div className="bg-red-50 border border-red-200 rounded-2xl p-4 text-red-600 text-sm">Failed to load: {this.state.msg}</div>;
+    return this.props.children;
+  }
+}
 
 const CITIES = ["Bangalore", "Delhi", "Mumbai", "Chennai"];
 
@@ -111,7 +121,9 @@ export default function Dashboard() {
       {/* Heatmap */}
       <div className="mb-6">
         <h2 className="text-lg font-bold text-gray-700 mb-3">Waste Density Heatmap</h2>
-        <WasteHeatmap points={heatmapPoints} city={city} loading={loadingHeatmap} />
+        <ErrorBoundary>
+          <WasteHeatmap points={heatmapPoints} city={city} loading={loadingHeatmap} />
+        </ErrorBoundary>
         <p className="text-xs text-gray-400 mt-2">
           Heatmap uses weighted Gaussian KDE with time decay. Red = high urgency accumulation.
         </p>
@@ -119,14 +131,14 @@ export default function Dashboard() {
 
       {/* Charts row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <TrendChart data={trends} title={`Daily Scans — ${city}`} />
-        <CategoryPieChart data={categories} title="Waste Category Distribution" />
+        <ErrorBoundary><TrendChart data={trends} title={`Daily Scans — ${city}`} /></ErrorBoundary>
+        <ErrorBoundary><CategoryPieChart data={categories} title="Waste Category Distribution" /></ErrorBoundary>
       </div>
 
       {/* Hotspots + Route */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <HotspotTable hotspots={hotspots} loading={loadingAnalytics} />
-        <RouteDisplay city={city} />
+        <ErrorBoundary><HotspotTable hotspots={hotspots} loading={loadingAnalytics} /></ErrorBoundary>
+        <ErrorBoundary><RouteDisplay city={city} /></ErrorBoundary>
       </div>
     </div>
   );

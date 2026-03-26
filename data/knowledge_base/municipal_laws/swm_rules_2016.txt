@@ -1,54 +1,86 @@
 SOLID WASTE MANAGEMENT RULES 2016 - INDIA
 Ministry of Environment, Forest and Climate Change, Government of India
+Gazette Notification S.O. 1357(E), April 8, 2016
 
-KEY PROVISIONS FOR CITIZENS:
+=== OVERVIEW ===
+The SWM Rules 2016 replace the Municipal Solid Wastes Rules 2000 and apply to every urban local body, census towns, notified industrial townships, Indian Railways, airports, ports, defence establishments, SEZs, and pilgrimage sites across India.
 
-1. MANDATORY SEGREGATION AT SOURCE
-All households must segregate waste into three categories:
-- WET WASTE (Green Bin): Food scraps, vegetable peels, fruit waste, garden waste, cooked food, teabags, flowers, leaves
-- DRY WASTE (Blue Bin): Paper, cardboard, plastic bottles, glass, metal cans, cartons, rubber, cloth, wood
-- HAZARDOUS WASTE (Red Bin): Batteries, bulbs, medicines, chemicals, e-waste, paint cans, syringes, diapers, sanitary napkins
+=== RULE 4: DUTIES OF WASTE GENERATORS ===
+Every waste generator shall:
+1. Segregate and store waste in THREE separate streams:
+   GREEN BIN — WET/BIODEGRADABLE: food scraps, vegetable peels, fruit waste, garden waste, leftover food, eggshells, tea leaves, bones
+   BLUE BIN — DRY/RECYCLABLE: paper, cardboard, plastic bottles, metal cans, glass, rubber, clean cloth
+   RED BIN — DOMESTIC HAZARDOUS: medicines, batteries, CFL bulbs, paint tins, pesticide containers, sanitary waste, diapers, syringes
+2. Wrap sanitary waste and soiled diapers in newspaper before placing in red bin
+3. Hand over segregated waste to waste collectors — do NOT mix streams
+4. Pay user fee as determined by local authority
+5. Penalty for littering in public: Rs. 500 (first offence), Rs. 1,000 (repeat)
+6. NOT burn waste in open — penalty Rs. 5,000
 
-2. PENALTY FOR NON-COMPLIANCE
-- Throwing unsegregated waste: Fine up to Rs. 500 per instance
-- Littering in public: Fine Rs. 200 to Rs. 1000
-- Burning waste: Fine up to Rs. 5000
-- Municipal authorities can impose higher penalties
+=== BIN COLOR CODE — NATIONAL STANDARD ===
+GREEN BIN (Wet/Biodegradable Waste):
+- Kitchen: vegetable peels, fruit scraps, eggshells, tea/coffee grounds, cooked food, fish/meat scraps
+- Garden: dry leaves, grass clippings, flower waste, coconut shells
+- Paper napkins (soiled), paper bags (food soiled)
 
-3. EXTENDED PRODUCER RESPONSIBILITY (EPR)
-Manufacturers of plastic, e-waste, and packaging must take back their products.
-Citizens can return e-waste to authorized collection centers or manufacturer take-back programs.
+BLUE BIN (Dry/Recyclable Waste):
+- Paper: newspapers, magazines, cardboard boxes, books, envelopes
+- Plastic: PET bottles (#1), HDPE containers (#2), PP containers (#5) — must be clean and dry
+- Metal: aluminium cans, steel tins, copper wire, iron scrap
+- Glass: bottles, jars (unbroken), window glass
+- Rubber: old tyres (small), rubber bands, rubber slippers
+- Clean cloth, leather, tetra packs
 
-4. BULK WASTE GENERATORS
-Hotels, offices, markets with >100 kg/day must arrange own collection and composting.
+RED BIN (Domestic Hazardous Waste):
+- Medicines (expired/unused), syringes, IV bottles
+- Batteries: AA, AAA, D-cell, button cells, lithium-ion, lead-acid
+- CFL bulbs, fluorescent tubes (contain mercury — must not break)
+- Paint containers, thinner, varnish, adhesive tins
+- Pesticide/insecticide containers (empty or partial)
+- Sanitary napkins, diapers (wrapped in newspaper)
+- Soiled cotton, bandages, wound dressings
 
-5. PLASTIC WASTE
-- Single-use plastic below 75 microns is banned in India (effective July 2022)
-- Multi-layer plastic sachets must go to Dry Waste Collection Centre (DWCC)
-- PET bottles (water, cola) are highly recyclable - rinse before disposal
+=== PENALTIES UNDER SWM RULES 2016 ===
+- Littering in public place: Rs. 500 (1st), Rs. 1,000 (repeat)
+- Dumping waste in open: Rs. 500 – Rs. 5,000 based on quantity
+- Not segregating waste: As per local ULB bye-laws (typically Rs. 100–500)
+- Burning waste openly: Rs. 5,000 + environmental damage cost
+- Industrial/commercial non-compliance: Up to Rs. 25,000 + prosecution under Environment Protection Act
+- Bulk generators (>100 kg/day) not composting on-site: Rs. 10,000/month
 
-6. ORGANIC WASTE
-- Wet waste should be composted at home or sent to biogas plants
-- Do not mix wet waste with dry waste - contamination makes recycling impossible
-- Garden waste (leaves, branches) should be composted separately
+=== RULE 9: PROCESSING TARGETS ===
+- Biodegradable waste: Must be composted or sent to biogas plant — target 100%
+- Dry recyclable waste: Must reach registered recyclers — target 100%
+- Sanitary/hazardous waste: Must be incinerated at authorised facilities
+- C&D waste: Must be processed at C&D waste plants, not mixed with MSW
+- Landfill diversion target: 80% of waste must be processed, not dumped
 
-7. E-WASTE (Electronic Waste)
-- NEVER throw in regular bins - contains heavy metals (lead, mercury, cadmium)
-- Drop at authorized E-Waste Collection Centers
-- Contact manufacturer for free take-back programs (mandatory under E-Waste Rules 2022)
-- BBMP (Bangalore), MCD (Delhi), MCGM (Mumbai) have designated collection points
+=== RULE 15: BULK WASTE GENERATORS ===
+Entities generating >100 kg waste/day (hotels, malls, offices, hospitals, institutions) must:
+1. Segregate at source — wet, dry, hazardous — mandatory
+2. Process biodegradable waste on-site: composting unit or biogas plant mandatory
+3. Arrange dry waste collection via registered recyclers (kabadiwala or MRF)
+4. Submit monthly waste audit reports to local ULB
+5. Penalty: Rs. 10,000/month for non-compliance
 
-8. BIOMEDICAL WASTE
-- Used masks, syringes, bandages with blood: dispose in Red bag at hospitals or BBMP hazardous collection
-- Citizens should use yellow/red designated bags for COVID/biomedical waste
-- Municipal medical waste must go to authorized Treatment Storage Disposal Facility (TSDF)
+=== RULE 22: EXTENDED PRODUCER RESPONSIBILITY (EPR) ===
+Producers, importers, brand owners of:
+- Plastic packaging: register with CPCB, meet annual collection/recycling targets
+- E-waste: authorised collection centres, targets per category
+- Batteries: take-back programmes mandatory
+Annual compliance reports mandatory; non-compliance: cancellation of EPR certificate + fine
 
-9. CONSTRUCTION AND DEMOLITION WASTE
-- Must be separately collected and sent to C&D waste processing facilities
-- Cannot be mixed with regular solid waste
-- Contact local municipal body for bulky C&D pickup
+=== CONSTRUCTION AND DEMOLITION (C&D) WASTE ===
+- Never mix with household MSW
+- Segregate: concrete, bricks, tiles, steel, wood, plasterboard separately
+- Reuse broken bricks as filling material for roads
+- Deposit at designated C&D waste collection points (BBMP/MCD sites)
+- Fine for dumping C&D waste in public: Rs. 5,000–50,000 per incident
 
-10. COMPOSTING
-- Home composting of wet waste is encouraged and subsidized in many Indian cities
-- BBMP Bangalore: Subsidized composting units available for Rs. 500 (actual cost Rs. 1500)
-- Terrace composting and kitchen composting bins available from municipal bodies
+=== IMPLEMENTATION MILESTONES ===
+- Total MSW generated in India: ~1.5 lakh metric tonnes/day (2023)
+- Waste processed (compost/biogas/RDF): ~38% (national average)
+- Cities with 100% door-to-door collection: ~70%
+- Active composting plants: 3,200+
+- Swachh Bharat Mission 2.0 target: Zero open dumping, zero open burning by 2026
+- States with best compliance: Karnataka, Gujarat, Maharashtra, Telangana

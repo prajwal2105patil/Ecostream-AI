@@ -1,59 +1,113 @@
-PLASTIC WASTE DISPOSAL GUIDE FOR INDIAN HOUSEHOLDS
+PLASTIC DISPOSAL IN BANGALORE AND INDIA — COMPLETE GUIDE
 
-IDENTIFYING PLASTIC TYPES (Resin Code on bottom of container):
+=== IDENTIFYING PLASTIC TYPES (Resin Code on bottom of container) ===
 
-#1 PET (Polyethylene Terephthalate)
-- Examples: Water bottles, cold drink bottles, juice bottles, mouthwash bottles
-- Recyclability: HIGH - Most valuable recyclable plastic in India
-- Bin: Blue Dry Waste bin
-- Preparation: Empty, rinse, crush to save space, remove caps (caps can go separately)
-- Kabadiwala value: Rs. 6-10 per kg
+#1 PET (Polyethylene Terephthalate) — HIGHLY RECYCLABLE
+Examples: Water bottles, cold drink bottles, juice bottles, cooking oil bottles, mouthwash bottles
+Bin: BLUE (Dry recyclable)
+Steps:
+1. Empty completely — no liquid residue
+2. Rinse with water once
+3. Crush the bottle to save space
+4. Remove cap and dispose separately (cap = #5 PP)
+5. Remove paper label if possible
+6. Place in blue bin or hand to kabadiwala
+Where it goes: DWCC → kabadiwala → plastic granule manufacturer (PET recycled into polyester fibre, new bottles)
+Kabadiwala rate: Rs. 8–12 per kg in Bangalore (2023)
 
-#2 HDPE (High-Density Polyethylene)
-- Examples: Milk pouches, shampoo bottles, detergent bottles, buckets
-- Recyclability: HIGH
-- Bin: Blue Dry Waste bin
-- Preparation: Rinse thoroughly, remove labels if possible
-- Kabadiwala value: Rs. 5-8 per kg
+#2 HDPE (High-Density Polyethylene) — HIGHLY RECYCLABLE
+Examples: Milk bottles, shampoo bottles, detergent containers, motor oil cans, water cans
+Bin: BLUE (Dry recyclable)
+Steps:
+1. Empty and rinse thoroughly (especially oil/chemical containers)
+2. Remove pump dispensers (non-recyclable — red bin)
+3. Crush and place in blue bin
+Kabadiwala rate: Rs. 6–10 per kg in Bangalore
 
-#3 PVC (Polyvinyl Chloride)
-- Examples: Some pipes, floor tiles, some packaging
-- Recyclability: LOW - Toxic when burned, avoid
-- Bin: Dry Waste Collection Centre (DWCC) only - do NOT give to kabadiwala
-- Note: Contains phthalates and lead - handle carefully
+#3 PVC (Polyvinyl Chloride) — DIFFICULT TO RECYCLE, HANDLE WITH CARE
+Examples: Pipes, window frames, cable insulation, synthetic leather bags, shower curtains, blister packs
+Bin: BLUE (dry bin — some facilities accept, others don't)
+NEVER BURN PVC — releases dioxins and hydrochloric acid gas, extremely toxic
+Steps: Place in blue bin; if DWCC rejects, place in red bin for special disposal
+Note: PVC is the most hazardous plastic to recycle — avoid purchasing PVC products where possible
 
-#4 LDPE (Low-Density Polyethylene)
-- Examples: Plastic bags, cling film, bread bags, squeeze bottles
-- Recyclability: MEDIUM - Accepted at select DWCCs
-- Bin: Dry Waste Collection Centre
-- Note: NEVER recycle plastic bags with food residue - contaminates batch
+#4 LDPE (Low-Density Polyethylene) — PARTIALLY RECYCLABLE
+Examples: Plastic carry bags, cling wrap, bread bags, squeeze bottles, plastic film packaging, bubble wrap
+Bin: BLUE bin (but many DWCCs don't accept loose plastic film)
+Steps:
+1. Collect clean plastic bags in a single bag
+2. Hand the bag-of-bags to kabadiwala
+3. Plastic film: fold flat and bundle together
+Note: India's Plastic Waste Management Rules 2022 ban single-use plastic bags <75 microns
+Alternatives: Cloth bags (reusable), paper bags, jute bags
 
-#5 PP (Polypropylene)
-- Examples: Yogurt containers, medicine bottles, bottle caps, straws, chips bags
-- Recyclability: MEDIUM-HIGH
-- Bin: Blue Dry Waste bin
-- Preparation: Rinse and dry
+#5 PP (Polypropylene) — RECYCLABLE
+Examples: Yogurt containers, medicine bottles, bottle caps, straws, microwave containers, storage boxes, plastic chairs
+Bin: BLUE (dry recyclable)
+Steps:
+1. Rinse food containers
+2. Keep bottle caps on — they are #5 PP
+3. Place in blue bin or give to kabadiwala
+Kabadiwala rate: Rs. 4–8 per kg
 
-#6 PS (Polystyrene/Thermocol)
-- Examples: Thermocol packaging, foam cups, takeout containers
-- Recyclability: VERY LOW in India - not accepted by most facilities
-- Bin: Red Reject bin in BBMP; General waste in other cities
-- Note: Never burn thermocol - releases styrene, a carcinogen
+#6 PS (Polystyrene/Thermocol) — MOSTLY NOT RECYCLABLE
+Examples: Thermocol packaging, disposable plates and cups, egg cartons, foam food containers
+Bin: RED bin (reject waste — cannot be recycled easily)
+NEVER BURN thermocol — releases styrene gas, a known carcinogen
+Disposal: Compact, bag, and place in red/reject bin for landfill disposal
+India banned expanded polystyrene (thermocol) as single-use plastic from July 2022
 
-#7 Other (Mixed)
-- Examples: Multi-layer plastic, some water cooler bottles, CDs
-- Recyclability: VERY LOW
-- Bin: Red Reject / Dry Waste Collection Centre
-- Multi-layer plastic (chips packets, juice boxes): DWCC or authorized collector
+#7 Other (PC, ABS, Nylon, Bioplastic, Mixed)
+Examples: CDs/DVDs, hard plastic toys, 3- and 5-gallon water jugs, electronic casings, sunglasses, baby bottles
+Bin: BLUE bin (hard plastic) or RED bin (if unsure)
+Note: Polycarbonate (#7) may contain BPA — do not heat food in these containers
+Electronic casings: Treat as e-waste, hand to authorised e-waste recycler
 
-IMPORTANT RULES FOR ALL PLASTIC:
-1. The "Greasy Pizza Box Rule": If plastic has food contamination (oil, curry), it cannot be recycled - put in wet waste
-2. BLACK PLASTIC cannot be detected by sorting machines - goes to landfill even if "recyclable" type
-3. Always separate caps from bottles (different plastic types)
-4. The number inside the triangle does NOT mean it's recycled - check with your local DWCC
+=== INDIA'S PLASTIC WASTE MANAGEMENT RULES 2022 ===
+Single-Use Plastic (SUP) items BANNED in India from July 1, 2022:
+- Plastic sticks for balloons
+- Plastic sticks in ear buds/cotton swabs
+- Plastic flags
+- Candy/lollipop sticks
+- Ice cream sticks
+- Polystyrene (thermocol) for decoration
+- Plastic plates, cups, glasses, cutlery (forks, spoons, knives)
+- Plastic straws
+- Plastic trays
+- Plastic wrapping/packaging film around sweet boxes
+- Invitation cards with plastic coating
+- Cigarette packets with plastic wrapping
+- Carry bags below 75 microns thickness
+- Plastic stirrers for beverages
 
-KABADIWALA NETWORK:
-- Informal collectors are India's backbone of plastic recycling
-- Accept: PET bottles, HDPE, newspapers, metal, glass bottles
-- Do NOT accept: Multi-layer, food-contaminated, dirty plastic
-- App: Kabadiwala app available in Bangalore, Pune, Delhi for scheduled pickup
+Penalty for manufacturing/using banned SUP: Rs. 10,000–1,00,000 per offence (EPR violation: cancellation of registration)
+
+=== HOW TO DISPOSE PLASTIC IN BANGALORE ===
+STEP 1: Check the resin code (triangle with number) on the bottom
+STEP 2: Segregate — recyclable (#1,2,4,5) go in blue bin; thermocol, PVC in red bin
+STEP 3: Rinse containers — dirty plastic is rejected by recyclers
+STEP 4: Hand to Pourakarmika or deposit at DWCC
+STEP 5: For large quantities (moving house, renovation) — contact kabadiwala directly
+
+FINDING A KABADIWALA IN BANGALORE:
+- Kabadiwala.com app — online pickup service, minimum 5 kg
+- I Got Garbage app — Bangalore-specific, book pickup online
+- ScrapQ app — instant quote, doorstep pickup
+- Local kabadiwala shops: every area has one; often in small lanes near markets
+
+=== MULTILAYER PLASTIC (MLP) ===
+Examples: Chips packets, namkeen packets, biscuit wrappers, chocolate wrappers, toothpaste tubes
+These are NOT recyclable through normal channels
+Bin: RED bin (reject waste)
+EPR Programme: Many FMCG brands have take-back programmes for MLP — check brand website
+Alternative: Some organisations (Kabadiwala Foundation, Saahas) collect MLP for co-processing in cement kilns
+
+=== PLASTIC BOTTLES — STEP BY STEP (QUICK REFERENCE) ===
+Water bottle (PET): Empty → rinse → crush → blue bin ✓
+Milk pouch (LDPE): Cut open → rinse → blue bin (bundle with other pouches)
+Oil bottle (HDPE): Empty → rinse thoroughly → blue bin ✓
+Shampoo bottle: Squeeze out completely → rinse → remove pump → blue bin ✓
+Ketchup bottle: Empty → rinse → remove cap → blue bin ✓
+Medicine strip (blister pack): Red bin (PVC + aluminium laminate — not recyclable)
+Chips packet: Red bin (MLP — not recyclable)
+Thermocol box: Red bin — NEVER BURN ✓

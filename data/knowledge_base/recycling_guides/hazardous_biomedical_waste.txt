@@ -1,0 +1,132 @@
+HAZARDOUS AND BIOMEDICAL WASTE DISPOSAL GUIDE FOR INDIA
+Bio-Medical Waste Management Rules 2016 + SWM Rules 2016
+
+=== DOMESTIC HAZARDOUS WASTE — RED BIN ===
+Waste that is toxic, flammable, corrosive, or reactive — never mix with regular waste.
+
+MEDICINES AND PHARMACEUTICAL WASTE:
+What: Expired medicines, unused prescription drugs, antibiotics, syrups, ointments, injections
+Why hazardous: Pharmaceutical contamination in groundwater; antibiotic resistance from improper disposal
+NEVER: Flush down toilet (contaminates water supply), throw in green/blue bin, burn
+Correct disposal:
+1. Keep in original container if possible
+2. Place in RED bin for collection OR
+3. Return to nearest pharmacy — many pharmacies in India accept expired medicines
+4. CPCB "Safe Disposal of Unwanted Medicines" programme: registered collection centres
+5. In Bangalore: Apollo, Manipal, Fortis hospitals have medicine take-back points
+
+SYRINGES AND SHARPS:
+Used by diabetics, patients requiring injections at home
+NEVER put loose needles in any bin — injury to Pourakarmikas, waste handlers
+Correct disposal:
+1. "Clip and cap" method: Use a syringe clipper (Rs. 80–150, available at medical stores) — clips the needle safely
+2. Or: place used syringe (capped) in a HARD plastic bottle (500 ml cold drink bottle works) — fill and tape shut
+3. Label bottle "SHARPS — HANDLE WITH CARE"
+4. Deposit at nearest hospital waste management station or pharmacy
+
+BATTERIES — ALL TYPES:
+Why hazardous: Lead, cadmium, mercury, lithium — all leach into soil and groundwater
+AA/AAA/C/D (Alkaline): RED bin or DWCC
+9V batteries: RED bin
+Button cells (watch batteries): Jeweller shops, DWCC, e-waste centres
+Lithium-ion (phone, laptop): MANUFACTURER take-back only — fire/explosion risk if punctured; NEVER crush or puncture
+Lead-acid car/inverter battery: ALWAYS return to battery dealer/mechanic — they pay Rs. 200–500 back; mandatory take-back programme in India
+Rechargeable NiMH/NiCd (older phones, toys): DWCC or e-waste recycler
+
+CFL BULBS AND FLUORESCENT TUBES:
+Contain mercury (3–5 mg per CFL) — extremely toxic if released
+If CFL breaks at home:
+1. Open windows, leave room for 15 minutes (ventilation)
+2. Do NOT vacuum — spreads mercury dust
+3. Pick up large pieces with gloves or stiff paper
+4. Use damp paper towel for small fragments
+5. Place in zip-lock bag or sealed container
+6. Label "BROKEN CFL — CONTAINS MERCURY"
+7. Take to DWCC or call BBMP 1533
+Correct disposal of intact CFLs:
+- BBMP DWCC — accepts CFLs and fluorescent tubes
+- Electronics shops: Philips, Osram, Syska dealers take back old bulbs
+- First Saturday e-waste drive at BBMP ward offices
+- NEVER in regular bin, NEVER break intentionally
+
+PAINT AND CHEMICAL CONTAINERS:
+Paints (oil-based), varnish, thinner, turpentine, wood preservatives, adhesives:
+- Let container dry completely — expose to air until contents solidify
+- Once solidified: place in RED bin
+- Liquid contents: Use completely, do not dump in drain (blocks and pollutes)
+- Empty containers with dried paint: RED bin (some DWCCs accept)
+Water-based paints: Less hazardous; let dry completely, then RED/blue bin
+
+PESTICIDE AND INSECTICIDE CONTAINERS:
+Highly toxic — do NOT reuse containers for any purpose
+- Triple rinse empty containers with water (rinse water can be used as diluted pesticide on plants)
+- Puncture or crush the container so it cannot be reused
+- Place in RED bin
+- Never burn pesticide containers — toxic fumes
+- BBMP and Agriculture Department organise periodic collection drives for farm pesticide containers
+
+MOTOR OIL AND LUBRICANTS:
+Never pour down drain or on ground
+Used motor oil: Take to mechanic/petrol station — they sell it to oil recyclers
+Oil filters: Metal + oil — take to mechanic for proper disposal
+Brake fluid, coolant: Mechanic for disposal; do not mix with other waste
+
+=== BIOMEDICAL WASTE (HEALTHCARE) ===
+Bio-Medical Waste Management Rules 2016 govern disposal from hospitals, clinics, laboratories.
+
+COLOUR CODING FOR BIOMEDICAL WASTE:
+YELLOW bag: Anatomical waste, human tissues, placenta, organs, contaminated waste (autoclave then landfill)
+RED bag: Recyclable contaminated waste — IV bottles, tubing, catheters (after disinfection → recycler)
+WHITE/TRANSLUCENT: Sharps — needles, blades, broken glass (puncture-proof container → autoclave → shredder)
+BLUE/TRANSPARENT: Glassware — glass slides, broken glass from lab (puncture-proof box)
+
+FOR HOME HEALTHCARE PATIENTS:
+If someone at home generates healthcare waste (wound dressings, bandages, IV equipment):
+1. Collect in a separate RED bin
+2. Tie securely in RED bag or heavy-duty garbage bag
+3. Hand to nearest private clinic/hospital — they must accept under Bio-Medical Waste Rules
+4. Do NOT mix with household waste
+5. Soiled bandages and cotton: wrap in newspaper, seal, RED bin — okay for minimal quantities
+
+=== SANITARY WASTE ===
+Under SWM Rules 2016:
+Sanitary napkins, tampons, diapers (adult and baby):
+
+Correct disposal:
+1. Wrap used sanitary napkin/diaper in the wrapper of the new one, or in newspaper
+2. Seal with tape if possible
+3. Place in RED bin (domestic hazardous/reject bin)
+4. Do NOT flush (causes sewer blockages — costs BWSSB crores in clearance)
+5. Do NOT throw in green or blue bin (contaminates recyclables, spreads pathogens)
+
+Why RED bin? Sanitary waste contains body fluids (biohazardous) and plastic/superabsorbent polymer (non-recyclable). It goes to specially designed landfill cells or incineration.
+
+Current problem in India: Most citizens don't wrap sanitary waste, creating severe hazard for Pourakarmikas who handle waste by hand. Please ALWAYS wrap before disposal.
+
+=== CONSTRUCTION WASTE IN HOUSEHOLDS ===
+Renovation debris — treated separately from household waste:
+What: Broken tiles, rubble, cement, bricks, plaster, wood (painted), steel reinforcement
+NEVER mix with household MSW (clogs collection vehicles, harms Pourakarmikas)
+Disposal:
+1. Hire a builder to collect and transport to BBMP-designated C&D waste site
+2. BBMP has C&D waste plants at Kannahalli, Yelahanka, Bommasandra
+3. For small quantities (minor repairs): Contact BBMP ward office for guidance
+4. Metal reinforcement (steel rods): Sell to scrap dealer — high value
+5. Broken tiles and bricks: Can be reused as garden pathway, pot drainage, filling
+
+=== SUMMARY — RED BIN ITEMS (QUICK REFERENCE) ===
+✓ Expired/unused medicines
+✓ Syringes and sharps (in hard container)
+✓ All batteries (AA, lithium-ion, lead-acid, button cells)
+✓ CFL and fluorescent bulbs (intact — handle gently)
+✓ Paint tins (empty/dried)
+✓ Pesticide containers (triple rinsed)
+✓ Sanitary napkins, diapers, tampons (wrapped in newspaper)
+✓ Soiled bandages and wound dressings (wrapped)
+✓ Cosmetics past expiry date
+✓ Thermocol (expanded polystyrene)
+✓ Laminated packaging, metallic pouches, blister packs
+✓ Carbon paper, thermal paper (ATM receipts)
+✓ Broken crockery, ceramics (wrap in newspaper — SHARP)
+✓ Hair (large quantities — such as from salon)
+✓ Cigarette butts (nicotine is toxic to soil microbes)

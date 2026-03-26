@@ -1,64 +1,121 @@
 ORGANIC WASTE AND COMPOSTING GUIDE FOR INDIA
+BBMP Sahaaya Programme + SWM Rules 2016 Compliance
 
-WHAT IS ORGANIC/WET WASTE?
-- Fruit and vegetable peels and scraps
-- Cooked and uncooked food waste
-- Eggshells (considered dry but can compost)
-- Tea bags and coffee grounds
-- Garden waste: leaves, flowers, grass clippings
-- Wilted/old flowers
-- Paper napkins (wet/food-stained)
+=== WHAT IS WET/ORGANIC WASTE? ===
+Biodegradable waste that can be composted or converted to biogas:
 
-WHAT NOT TO PUT IN ORGANIC BIN:
-- Meat, fish, bones (attracts pests - better in biogas)
-- Dairy products in large quantities
-- Oily/greasy food in large amounts
-- Diseased plants
+YES — Put in GREEN BIN:
+- Vegetable peels and scraps (potato, onion, carrot, etc.)
+- Fruit peels and cores (banana, mango, apple, citrus — all okay)
+- Cooked food leftovers (rice, dal, roti, curry, bread)
+- Uncooked food scraps (wilted vegetables, spoiled fruit)
+- Eggshells (excellent compost additive — calcium rich)
+- Tea bags and tea leaves, coffee grounds and filter paper
+- Fish bones and small animal bones
+- Garden waste: dry leaves, grass clippings, flower waste, small twigs
+- Soiled paper napkins, paper bags with food stains
+- Coconut shells (dried), sugarcane pulp
 
-DISPOSAL OPTIONS IN INDIA:
+NO — Do NOT put in green bin:
+- Plastic bags or wrappers (even "biodegradable" — slow to decompose)
+- Glass, metal, rubber
+- Sanitary napkins, diapers (RED bin)
+- CFL bulbs, batteries (RED bin)
+- Large quantities of oil or liquid (absorb in newspaper first)
+- Dead animals (requires special disposal — contact BBMP)
 
-1. POURAKARMIKAS / DOOR-TO-DOOR COLLECTION
-- Separate wet waste in green bag/bin for daily collection
-- Collection time: 6-10 AM in most Indian cities
-- Do NOT mix wet with dry - leads to entire batch going to landfill
+=== COMPOSTING AT HOME — STEP BY STEP ===
+Home composting is the best way to reduce wet waste going to landfills.
 
-2. HOME COMPOSTING
-Equipment: Earthen pot, plastic bin with holes, terrace composter
-Process:
-- Layer 1: Brown material (dry leaves, cardboard strips)
-- Layer 2: Green material (food waste)
-- Add microbial culture or cow dung for faster decomposition
-- Turn every 3-5 days, maintain moisture (damp not wet)
-- Ready in 30-45 days
-BBMP subsidy: Rs. 500 for composting units
-Output: Rich organic fertilizer for garden/terrace garden
+METHOD 1: POT/TERRACOTTA COMPOSTING (Apartments — most practical)
+What you need: 2-3 clay or plastic pots (10–15 litre), cocopeat or dry leaves, kitchen waste
+Steps:
+1. Layer 2 inches of cocopeat/dry leaves at bottom
+2. Add kitchen waste (vegetable peels, fruit scraps, cooked food) — 1-2 cups at a time
+3. Sprinkle thin layer of cocopeat/dry soil on top
+4. Repeat layers; keep lid loosely placed (not airtight — needs air)
+5. Rotate between pots: when Pot 1 is full, switch to Pot 2 while Pot 1 matures
+6. Compost is ready in 45–60 days — dark brown, earthy smell, crumbly texture
+7. Use in pots, garden beds, donated to BBMP's urban farming
 
-3. BIOGAS PLANTS (Apartment Complex Scale)
-- Minimum: 50+ families for a community biogas unit
-- Output: Cooking gas + organic slurry fertilizer
-- BBMP provides capital subsidy: 50% up to Rs. 1 lakh
-- Bangalore has 200+ apartment biogas plants
+TIPS:
+- Chop/shred waste into smaller pieces — speeds decomposition by 50%
+- Maintain Carbon:Nitrogen ratio — for every bucket of wet waste (N), add half bucket dry leaves/cocopeat (C)
+- Too wet = add dry leaves; too dry = sprinkle water
+- Mild earthy smell is normal; foul/rotten smell means too wet or anaerobic — add dry leaves and mix
 
-4. KHAMBA / TERRACE COMPOSTING
-- Suitable for 1-4 person households
-- Three-tier system: Top tier (fresh waste), Middle (decomposing), Bottom (ready compost)
-- Available from BBMP for Rs. 500 (actual cost Rs. 2000)
+METHOD 2: KHAMBA COMPOSTING (Traditional Indian Method)
+Khamba = 3-stacked terracotta pots with holes, traditional Indian composting vessel
+Used widely in Mumbai (Kavitha Kuruganti's initiative) and spreading to Bangalore
+Works same as pot composting but more efficient due to aeration holes
+BBMP distributes free Khambas under Sahaaya programme — contact your ward office
 
-COMPOSTING DO'S AND DON'TS:
-DO: Add dry material to balance wet, turn regularly, keep covered
-DON'T: Add plastics, glass, metal, synthetic fibers, treated wood
+METHOD 3: VERMICOMPOSTING (Worm Composting)
+Uses earthworms (Eisenia fetida — red wigglers) to accelerate decomposition
+Produces "vermicast" — highest quality organic fertiliser (better than chemical NPK)
+Steps:
+1. Get a wooden or plastic bin with drainage holes at bottom
+2. Add bedding: shredded newspaper + cocopeat (moistened)
+3. Add 100–200 earthworms (available from gardening stores, Rs. 200–400 per kg)
+4. Add kitchen waste in one corner; worms will migrate there
+5. Cover waste with damp newspaper or cardboard
+6. Harvest vermicast after 60–90 days from the oldest section
+Ideal for: Apartments with balcony, homes with garden
+Sells for: Rs. 15–40 per kg (if you have surplus)
+Bangalore suppliers: Hasiru Dala, Organic Mandya, Cubbon Park Nursery
 
-VERMICOMPOSTING:
-- Uses earthworms (Eisenia fetida) to break down organic matter
-- Produces worm castings - the most nutrient-rich organic fertilizer
-- Suitable for home use, requires 0.5 sq.ft space
-- GKVK and IIHR Bangalore sell starter kits
+METHOD 4: BIOGAS PLANT (Societies and Bulk Generators)
+Biogas plants convert wet waste into cooking gas (methane) and slurry (fertiliser)
+Recommended for: Apartments >50 units, schools, hospitals, restaurants
+Capacity: 1 kg wet waste → 100 litres of biogas (enough for 30 min cooking)
+Cost: Rs. 30,000–1,50,000 depending on size (subsidy available under MNRE scheme)
+Installation: BBMP empanelled vendors; free technical support from Karnataka Renewable Energy Development Ltd (KREDL)
+Biogas slurry: Excellent liquid fertiliser — dilute 1:10 with water for plants
 
-IMPACT OF ORGANIC WASTE IN LANDFILLS:
-- India sends 60% of waste (mostly organic) to landfills
-- Organic matter in landfills produces methane (28x more potent greenhouse gas than CO2)
-- Every 1 kg composted at home prevents 0.5 kg CO2-equivalent emissions
+=== WHAT HAPPENS TO YOUR GREEN BIN WASTE IN BANGALORE ===
+Collection → Pourakarmika collects segregated wet waste in green compartment of 3-compartment vehicle
+↓
+Transfer Station → Weighed and logged at Mini Transfer Station (MTS)
+↓
+Processing Facility → One of 11 BBMP biomethanation plants or 3,200+ small composting units
+Major plants:
+- Doddabidarakallu: 350 TPD capacity, produces electricity + compost
+- Lingadheeranahalli: 350 TPD, biomethanation
+- Subramanyapura: Windrow composting, 100 TPD
+- Koramangala-Ejipura: 10 TPD decentralised biogas plant
+↓
+Output → Compost sold to farmers at Rs. 4–6/kg | Biogas used in plant operations | Slurry used in BBMP gardens
 
-PENALTY:
-- Bulk organic waste generators (hotels >10 kg/day) must compost on-site
-- Fine: Rs. 5000/day for non-compliance under SWM Rules 2016
+=== BBMP SAHAAYA COMPOSTING PROGRAMME ===
+Free services from BBMP for Bangalore residents:
+1. Free compost bins distributed to RWAs and apartments (>20 units)
+2. Free vermicomposting kits for individual households (limited stock)
+3. Master Composter Training: 2-day free training; BBMP conducts monthly batches
+4. Compost pickup: BBMP picks up surplus compost for use in public parks
+5. Garden-to-kitchen cycle: BBMP uses compost in urban kitchen gardens
+
+To apply: Call BBMP 1533 or visit bbmpswr.org/sahaaya
+
+=== ORGANIC WASTE — DO's AND DON'Ts ===
+DO:
+✓ Segregate wet waste from dry — keep green bin separate
+✓ Drain excess liquid before putting in bin (prevents leakage, controls odour)
+✓ Wrap cooked non-vegetarian waste in newspaper — reduces smell
+✓ Start composting — even a small 5-litre pot makes a difference
+✓ Use compost in balcony plants — reduces need for chemical fertiliser
+✓ Shred large pieces before composting — faster breakdown
+
+DON'T:
+✗ Mix plastic bags with food waste — ruins the entire batch
+✗ Put large quantities of oil/liquid directly in green bin
+✗ Throw wet waste in dry bin or vice versa — defeats segregation
+✗ Leave uncovered wet bin outside for long — attracts flies and pests
+✗ Burn dry leaves — compost them instead
+
+=== ORGANIC WASTE — STATISTICS ===
+- Wet/organic waste = ~55% of total municipal solid waste in India
+- Bangalore generates ~5,000 tonnes of wet waste per day
+- Currently processed: ~40% (rest goes to open dumping grounds)
+- Home composting potential: If all Bangalore households composted, ~600 TPD diverted from landfills
+- Methane emissions from landfilling food waste: 2.5–3.5x more potent than CO2
+- Composting 1 kg food waste prevents ~0.6 kg CO2-equivalent emissions

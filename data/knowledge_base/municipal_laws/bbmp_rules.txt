@@ -1,44 +1,111 @@
-BBMP (Bruhat Bengaluru Mahanagara Palike) SOLID WASTE MANAGEMENT GUIDELINES
-Bangalore, Karnataka, India
+BBMP (BRUHAT BENGALURU MAHANAGARA PALIKE) SOLID WASTE MANAGEMENT GUIDELINES
+Bangalore, Karnataka, India — Updated 2023
 
-WASTE SEGREGATION:
-BBMP mandates three-bin segregation:
-- Green Bin (Wet/Organic): Fruit and vegetable waste, cooked food, garden waste, flowers
-- Blue Bin (Dry/Recyclable): Paper, cardboard, plastic, metal, glass, cloth, rubber
-- Red Bin (Reject/Hazardous): Thermocol, multi-layer plastic, diaper, sanitary products, rubber bands, carbon paper, broken glass with blood
+=== BBMP THREE-BIN SYSTEM (MANDATORY) ===
+BBMP mandates three-bin segregation for ALL Bangalore households and commercial establishments:
 
-COLLECTION SCHEDULE:
-- Pourakarmikas collect wet waste daily (Mon-Sat) between 6 AM - 10 AM
-- Dry waste collection every Tuesday and Friday in most wards
-- Bulky items: Call +91-80-22660000 for special pickup
+GREEN BIN — WET/BIODEGRADABLE WASTE:
+- Vegetable and fruit peels, scraps, seeds
+- Cooked and uncooked food leftovers
+- Eggshells, fish bones, meat scraps
+- Tea bags, coffee grounds, filter paper
+- Dry leaves, garden trimmings, flower waste
+- Soiled paper (food-soiled napkins, paper bags)
+- Coconut shells, sugarcane bagasse
 
-BBMP COLLECTION CENTERS:
-- Dry Waste Collection Centre (DWCC): Located in each ward
-- E-Waste collection: Most BBMP wards have monthly drives; contact ward office
-- Hazardous waste: BBMP Hazardous Waste Collection Centre, Peenya Industrial Area
+BLUE BIN — DRY/RECYCLABLE WASTE:
+- Plastic bottles and containers (PET, HDPE, PP) — rinse before discarding
+- Cardboard, newspapers, magazines, books
+- Metal tins, aluminium foil, steel scrap
+- Glass bottles and jars
+- Clean cloth and rubber items
+- Tetra packs (milk cartons, juice boxes)
+- Plastic bags (clean and dry)
 
-PLASTIC DISPOSAL IN BANGALORE:
-- PET bottles (#1): DWCC or kabadiwala - highly recyclable
-- HDPE (#2): Milk pouches, shampoo bottles - DWCC
-- PVC (#3): Avoid - send to DWCC only
-- LDPE (#4): Bags, films - DWCC
-- Thermocol/EPS: Red reject bin - cannot be recycled locally
+RED BIN — REJECT/HAZARDOUS WASTE:
+- Sanitary napkins and diapers (wrapped in newspaper)
+- Medicines and syringes
+- Batteries (all types)
+- CFL/fluorescent bulbs
+- Cosmetics, personal care products (non-recyclable)
+- Thermocol, carbon paper, sticker labels
+- Soiled bandages and cotton
 
-ORGANIC WASTE MANAGEMENT:
-- Bangalore has 200+ biogas plants managed by BBMP
-- Apartment complexes with >50 units must have composting on-site
-- IISc-developed composting bins available at BBMP offices
+=== BBMP COLLECTION SCHEDULE — BANGALORE ===
+DOOR-TO-DOOR COLLECTION:
+- Residential areas: 6:00 AM to 10:00 AM daily (Pourakarmikas with 3-compartment vehicles)
+- Commercial areas: 7:00 AM to 11:00 AM daily
+- Bulk generators: Separate schedule — contact BBMP ward office
 
-EWASTE DISPOSAL BANGALORE:
-- Attibele E-Waste recycling park (authorized facility)
-- Exigo Recycling (authorized collector)
-- Consumer Electronics Association certified collection points in Koramangala, Whitefield, Jayanagar
+SECONDARY COLLECTION POINTS:
+- Mini Transfer Stations (MTS): located in each ward — accept segregated waste
+- Auto-tippers: operate in narrow lanes not accessible to collection vehicles
+- BBMP helpline for missed collection: 1533 (toll-free, Bangalore)
 
-COMPOSTING SUBSIDY:
-BBMP provides subsidy for composting bins: Rs. 500 for home composters
+=== DRY WASTE COLLECTION CENTRES (DWCC) ===
+BBMP operates 208 DWCCs across Bangalore (target: one per ward).
+Timings: 8:00 AM – 6:00 PM, Monday–Saturday (closed Sunday)
+Accepted at DWCC:
+- All dry recyclables (paper, plastic, metal, glass, cardboard, e-waste)
+- Furniture (small items)
+- Kabadiwala services available at most DWCCs — get paid for recyclables!
 
-FINE SCHEDULE:
-- Throwing garbage in public: Rs. 500 first offense, Rs. 1000 repeat
-- Burning waste: Rs. 2000
-- Unsegregated waste: Rs. 200 per instance
-- Littering from vehicle: Rs. 1000
+=== BBMP BULK GENERATOR RULES ===
+Any premises generating >100 kg waste/day is classified as Bulk Generator:
+Includes: Apartments (>50 units), hotels, restaurants, offices, malls, hospitals
+Obligations:
+1. Must process wet waste ON-SITE using composting unit or biogas plant
+2. Compost/biogas slurry can be used as manure in gardens
+3. Dry waste must be handed to registered recyclers
+4. Monthly waste audit report to BBMP zonal office
+5. Fine: Rs. 10,000/month for non-compliance + vehicle impoundment for illegal dumping
+
+=== BBMP APARTMENT COMPLEX RULES ===
+Housing societies and apartment complexes:
+1. Must install wet waste processing unit (minimum 1 unit per 50 households)
+2. Compost bins in garden areas mandatory
+3. Separate storage room for dry recyclables mandatory
+4. Awareness drives for residents — BBMP provides training on request
+5. Best performer: "Clean and Green" certification from BBMP
+6. Incentive: Property tax rebate of 5% for certified green apartments
+
+=== BBMP E-WASTE COLLECTION ===
+Special e-waste collection drives: First Saturday of every month at ward offices
+Accepted items: Mobile phones, laptops, tablets, chargers, wires, TVs, fans, geysers
+BBMP authorised e-waste recyclers in Bangalore:
+- Attero Recycling, Sarjapur Road
+- E-Parisaraa Pvt Ltd, Dobbespet
+- Ash Recyclers, Peenya Industrial Area
+Drop-off: Any DWCC accepts e-waste; collected and sent to authorised recyclers weekly
+
+=== BBMP PENALTIES — BANGALORE SPECIFIC ===
+- Not segregating waste: Rs. 200 (first notice), Rs. 500 (second notice), Rs. 1,000 + court summons (third)
+- Throwing garbage in public: Rs. 500 on-the-spot fine
+- Illegal dumping on roads/vacant sites: Rs. 5,000–25,000
+- Commercial establishments not using three bins: Rs. 500/day fine
+- Burning waste: Rs. 5,000 + remediation cost
+- Apartments not composting: Rs. 10,000/month
+
+=== USEFUL BBMP CONTACTS — BANGALORE ===
+- BBMP Solid Waste Management helpline: 1533 (toll-free)
+- BBMP WhatsApp complaint: +91-80-2222-1122
+- BBMP SWM Special Commissioner: swm@bbmp.gov.in
+- Online complaint portal: bbmpswr.org
+- Pourakarmikas supervisor (per ward): Contact local ward office
+- Report illegal dumping: +91-80-2660-0782
+
+=== BBMP POURAKARMIKAS ===
+Pourakarmikas are BBMP's sanitation workers who collect door-to-door:
+- Always hand waste in SEGREGATED form — wet, dry, hazardous separately
+- Do NOT mix and hand over as single bag — they are not allowed to accept mixed waste
+- Tip: Keep a cloth bag for dry waste, bucket for wet waste, small bin for red bin items
+- Pourakarmikas work 6 days/week; Sunday is rest day (no collection most areas)
+- If collection is missed, call 1533 or register complaint on BBMP portal
+
+=== BBMP COMPOSTING INITIATIVE ===
+BBMP Sahaaya Composting Programme:
+- Free compost bins distributed to apartments > 20 units
+- Master Composters programme: BBMP trains residents for free
+- Compost produced: Citizen can use in garden or donate to BBMP's urban farming initiative
+- Biomethanation plants: 11 BBMP plants processing ~600 TPD wet waste into electricity/biogas
+- Major composting sites: Doddabidarakallu (350 TPD), Lingadheeranahalli (350 TPD), Mavallipura
