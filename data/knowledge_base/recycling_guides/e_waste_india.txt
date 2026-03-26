@@ -1,0 +1,55 @@
+E-WASTE (ELECTRONIC WASTE) DISPOSAL GUIDE FOR INDIA
+Under E-Waste (Management) Rules 2022
+
+WHAT IS E-WASTE?
+Electronic waste includes: Mobile phones, laptops, computers, monitors, keyboards, printers, tablets, cameras, chargers, batteries, TVs, refrigerators, washing machines, ACs, LED bulbs, fluorescent lights, microwave ovens
+
+WHY E-WASTE IS DANGEROUS:
+E-waste contains hazardous materials:
+- Lead (in CRT screens): Damages nervous system
+- Mercury (in LCD screens, fluorescent bulbs): Toxic to brain and kidneys
+- Cadmium (in batteries): Carcinogenic
+- Chromium: Causes DNA damage
+- Brominated flame retardants: Disrupt hormones
+NEVER burn or break e-waste - toxic fumes and leaching
+
+LEGAL REQUIREMENTS IN INDIA (E-Waste Rules 2022):
+- Consumers MUST deposit e-waste at authorized collection points
+- Manufacturers MUST provide free take-back programs
+- Improper disposal: Fine up to Rs. 1 lakh for bulk generators
+
+HOW TO DISPOSE E-WASTE IN INDIA:
+
+OPTION 1: MANUFACTURER TAKE-BACK (Free)
+- Samsung: samsung.com/in/recycling - call 1800-40-SAMSUNG
+- Apple: apple.com/in/shop/trade-in
+- Lenovo: lenovo.com/in/en/social_responsibility/recycling
+- HP: hp.com/in-en/hp-information/recycling/learnmore.html
+- All registered manufacturers must provide take-back under EPR
+
+OPTION 2: AUTHORIZED E-WASTE COLLECTORS
+Bangalore: Attibele Recycling Park, Exigo Recycling, E-Green (Peenya)
+Delhi: Greenscape Eco Management, Ash Recyclers (Okhla)
+Mumbai: Ecoreco, Trishyirec (Navi Mumbai)
+Chennai: Ramky Enviro Engineers
+Hyderabad: Ramky E-Waste, Greentek Reman
+
+OPTION 3: MUNICIPAL DRIVES
+- BBMP (Bangalore): Monthly e-waste drives in each ward - check bbmp.gov.in
+- MCD (Delhi): e-waste collection at 14 collection centers across Delhi
+- MCGM (Mumbai): e-waste collection vans in all 24 wards on designated days
+
+BATTERIES (Special Rules):
+- Li-ion (phone, laptop): Never puncture or throw in general waste. MANDATORY to return to manufacturer or authorized collector
+- Lead-acid (car, inverter): Return to battery dealer - they are REQUIRED by law to take them back
+- Alkaline (AA, AAA): Can go in dry waste if small quantity; better at collection centers
+
+FLUORESCENT/CFL BULBS:
+- Contain mercury - NEVER break. Wrap in paper, tape, place in RED hazardous bin
+- LED bulbs: Dry waste or e-waste center
+- Philips, Syska, Wipro have take-back programs
+
+PENALTY FOR DUMPING E-WASTE:
+- Household: Warning to Rs. 10,000
+- Bulk generators (offices): Up to Rs. 1 lakh
+- Recyclers without authorization: Up to Rs. 10 lakh + imprisonment

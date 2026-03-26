@@ -1,0 +1,40 @@
+# YOLOv11-seg Training Hyperparameters
+# Member 1 (AI/Vision Lead) - adjust for your GPU
+
+model: yolo11n-seg.pt   # start from pretrained nano-seg checkpoint
+data: ml-models/yolo/config/dataset.yaml
+
+epochs: 100
+imgsz: 640
+batch: 16          # reduce to 8 if GPU OOM
+workers: 4
+device: 0          # GPU 0; use 'cpu' if no GPU
+
+# Augmentation
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 10.0
+translate: 0.1
+scale: 0.5
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.1
+
+# Optimization
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+
+# Save
+project: runs/segment
+name: ecostream_waste
+save_period: 10
+exist_ok: true
+
+# Target metrics (Indian clustered waste)
+# mAP@50 > 0.55 is acceptable for demo; > 0.70 is publication-ready

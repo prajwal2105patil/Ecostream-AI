@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Custom design tokens */
+:root {
+  --eco-green: #16a34a;
+  --eco-blue: #2563eb;
+  --eco-orange: #ea580c;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Leaflet map overrides */
+.leaflet-container {
+  font-family: inherit;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
