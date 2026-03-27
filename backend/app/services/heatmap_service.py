@@ -19,6 +19,21 @@ sys.path.insert(
 )
 
 
+
+# Geographic bounding boxes for supported cities (lat/lon bounds)
+_CITY_BBOX = {
+    "bangalore":  {"lat_min": 12.70, "lat_max": 13.20, "lon_min": 77.35, "lon_max": 77.80},
+    "delhi":      {"lat_min": 28.40, "lat_max": 28.90, "lon_min": 76.80, "lon_max": 77.50},
+    "mumbai":     {"lat_min": 18.90, "lat_max": 19.30, "lon_min": 72.70, "lon_max": 73.00},
+    "chennai":    {"lat_min": 12.90, "lat_max": 13.30, "lon_min": 80.10, "lon_max": 80.40},
+    "hyderabad":  {"lat_min": 17.20, "lat_max": 17.60, "lon_min": 78.30, "lon_max": 78.70},
+}
+
+
+def _city_bbox(city: str) -> dict | None:
+    return _CITY_BBOX.get(city.lower().strip())
+
+
 def get_heatmap_points(
     db: Session,
     city: str,
@@ -29,18 +44,28 @@ def get_heatmap_points(
     """
     Query scans with location data and return heatmap input points.
     """
-    query = db.query(
-        Scan.latitude,
-        Scan.longitude,
-        Scan.urgency_score,
-        Scan.created_at,
-    ).filter(
+    bbox = _city_bbox(city)
+    filters = [
         Scan.latitude.isnot(None),
         Scan.longitude.isnot(None),
         Scan.scan_status == "done",
         Scan.created_at >= start_date,
         Scan.created_at <= end_date,
-    )
+    ]
+    if bbox:
+        filters += [
+            Scan.latitude  >= bbox["lat_min"],
+            Scan.latitude  <= bbox["lat_max"],
+            Scan.longitude >= bbox["lon_min"],
+            Scan.longitude <= bbox["lon_max"],
+        ]
+
+    query = db.query(
+        Scan.latitude,
+        Scan.longitude,
+        Scan.urgency_score,
+        Scan.created_at,
+    ).filter(*filters)
 
     scans = query.all()
     now = datetime.utcnow()

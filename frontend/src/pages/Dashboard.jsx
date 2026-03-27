@@ -1,11 +1,10 @@
-import React, { useState, useEffect, Component } from "react";
+import { useState, useEffect, Component } from "react";
 import { useAuth } from "../context/AuthContext";
 import WasteHeatmap from "../components/dashboard/WasteHeatmap";
 import TrendChart from "../components/dashboard/TrendChart";
 import CategoryPieChart from "../components/dashboard/CategoryPieChart";
 import HotspotTable from "../components/dashboard/HotspotTable";
 import RouteDisplay from "../components/dashboard/RouteDisplay";
-import LoadingSpinner from "../components/shared/LoadingSpinner";
 import { getHeatmapData, getHeatmapSummary } from "../api/heatmapApi";
 import { getTrends, getCategories, getHotspots } from "../api/analyticsApi";
 
@@ -77,14 +76,22 @@ export default function Dashboard() {
         <div className="flex items-center space-x-3">
           <select
             value={city}
-            onChange={(e) => setCity(e.target.value)}
+            onChange={(e) => {
+              setHeatmapPoints([]);
+              setSummary(null);
+              setCity(e.target.value);
+            }}
             className="border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-500"
           >
             {CITIES.map((c) => <option key={c}>{c}</option>)}
           </select>
           <select
             value={days}
-            onChange={(e) => setDays(Number(e.target.value))}
+            onChange={(e) => {
+              setHeatmapPoints([]);
+              setSummary(null);
+              setDays(Number(e.target.value));
+            }}
             className="border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-500"
           >
             <option value={1}>Last 24h</option>

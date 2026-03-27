@@ -13,7 +13,7 @@ const team = [
     role: "Member 2 — LLM & NLP Lead",
     name: "The Expert",
     focus: "RAG pipeline, ChromaDB vector store, LangChain, Indian municipal law ingestion, prompt engineering",
-    tools: "LangChain · ChromaDB · HuggingFace · OpenAI · sentence-transformers",
+    tools: "LangChain · ChromaDB · Groq · sentence-transformers · HuggingFace",
   },
   {
     emoji: "🦴",
@@ -40,7 +40,7 @@ const team = [
 
 const techStack = [
   { category: "AI / Vision", items: ["YOLOv11-seg", "PyTorch", "OpenCV", "Albumentations"] },
-  { category: "LLM / RAG", items: ["LangChain", "ChromaDB", "HuggingFace", "OpenAI API / Ollama"] },
+  { category: "LLM / RAG", items: ["LangChain", "ChromaDB", "Groq (llama3-8b)", "sentence-transformers"] },
   { category: "Backend", items: ["FastAPI", "PostgreSQL", "SQLAlchemy", "Docker"] },
   { category: "Frontend", items: ["React 19", "Vite", "Tailwind CSS 4", "Recharts", "React-Leaflet"] },
   { category: "Analytics", items: ["Scikit-learn", "SciPy KDE", "Pandas", "Gaussian Processes"] },

@@ -5,10 +5,13 @@ Member 5 (Research & Analytics Lead) owns this file.
 
 import sys
 import os
+import logging
 from datetime import datetime, timedelta
 from collections import defaultdict
 from sqlalchemy.orm import Session
 from sqlalchemy import func
+
+logger = logging.getLogger(__name__)
 
 from app.models.scan import Scan
 from app.models.waste_category import WasteCategory
@@ -29,10 +32,18 @@ def get_scan_trends(
     category_filter: str | None = None,
 ) -> list[dict]:
     """Return daily scan counts grouped by date."""
+    from app.services.heatmap_service import _city_bbox
     start = datetime.utcnow() - timedelta(days=days)
+    bbox = _city_bbox(city)
+    filters = [Scan.scan_status == "done", Scan.created_at >= start]
+    if bbox:
+        filters += [
+            Scan.latitude  >= bbox["lat_min"], Scan.latitude  <= bbox["lat_max"],
+            Scan.longitude >= bbox["lon_min"], Scan.longitude <= bbox["lon_max"],
+        ]
     scans = (
         db.query(Scan.created_at, Scan.dominant_category)
-        .filter(Scan.scan_status == "done", Scan.created_at >= start)
+        .filter(*filters)
         .all()
     )
 
@@ -69,52 +80,80 @@ def get_category_distribution(db: Session, days: int = 30) -> list[dict]:
 
 
 def get_predicted_hotspots(db: Session, city: str) -> list[dict]:
-    """Generate predicted hotspot data per ward."""
+    """Generate predicted hotspot data per ward using SQL aggregation (O(1) Python loop)."""
     try:
         from analytics.hotspot_predictor import predict_hotspots
-        from analytics.feature_engineering import build_ward_features
+        from analytics.feature_engineering import days_to_next_festival
+        from app.services.heatmap_service import _city_bbox
+        from sqlalchemy import case, cast
+        from sqlalchemy.dialects.postgresql import NUMERIC
 
-        # Get distinct wards with scan data
-        ward_rows = (
+        bbox = _city_bbox(city)
+        now = datetime.utcnow()
+        cutoff_7d = now - timedelta(days=7)
+        cutoff_24h = now - timedelta(hours=24)
+
+        # City-scoped base filters — only last 7 days
+        base_filters = [
+            Scan.scan_status == "done",
+            Scan.latitude.isnot(None),
+            Scan.longitude.isnot(None),
+            Scan.created_at >= cutoff_7d,
+        ]
+        if bbox:
+            base_filters += [
+                Scan.latitude  >= bbox["lat_min"], Scan.latitude  <= bbox["lat_max"],
+                Scan.longitude >= bbox["lon_min"], Scan.longitude <= bbox["lon_max"],
+            ]
+
+        # Round to 2 d.p. (~1 km grid) as ward proxy — cast needed because PostgreSQL
+        # ROUND(float8, int) requires numeric
+        lat_bucket = func.round(cast(Scan.latitude,  NUMERIC(10, 4)), 2)
+        lon_bucket = func.round(cast(Scan.longitude, NUMERIC(10, 4)), 2)
+
+        ward_stats = (
             db.query(
-                func.coalesce(Scan.latitude, 12.97),
-                func.coalesce(Scan.longitude, 77.59),
+                lat_bucket.label("lat"),
+                lon_bucket.label("lon"),
+                func.count(Scan.id).label("count_7d"),
+                func.sum(
+                    case((Scan.created_at >= cutoff_24h, 1), else_=0)
+                ).label("count_24h"),
+                func.avg(Scan.urgency_score).label("avg_urgency"),
             )
-            .filter(Scan.scan_status == "done", Scan.latitude.isnot(None))
-            .distinct()
+            .filter(*base_filters)
+            .group_by(lat_bucket, lon_bucket)
+            .order_by(func.count(Scan.id).desc())
             .limit(20)
             .all()
         )
 
-        if not ward_rows:
+        if not ward_stats:
             return _mock_hotspots(city)
 
-        recent_scans = (
-            db.query(Scan.created_at, Scan.urgency_score, Scan.dominant_category)
-            .filter(
-                Scan.scan_status == "done",
-                Scan.created_at >= datetime.utcnow() - timedelta(days=7),
-            )
-            .all()
-        )
-        recent_list = [
-            {"created_at": s.created_at, "urgency_score": s.urgency_score}
-            for s in recent_scans
+        festival_prox = days_to_next_festival(now)
+        features = [
+            {
+                "ward_number": f"W-{i+1:03d}",
+                "city": city,
+                "lat": float(row.lat),
+                "lon": float(row.lon),
+                "day_of_week": now.weekday(),
+                "hour_of_day": now.hour,
+                "week_of_year": now.isocalendar()[1],
+                "is_weekend": 1 if now.weekday() >= 5 else 0,
+                "scan_count_24h": int(row.count_24h or 0),
+                "scan_count_7d": int(row.count_7d or 0),
+                "avg_urgency_7d": round(float(row.avg_urgency or 0), 4),
+                "pct_hazardous_7d": 0.0,
+                "festival_proximity": festival_prox,
+            }
+            for i, row in enumerate(ward_stats)
         ]
 
-        features = []
-        for i, (lat, lon) in enumerate(ward_rows):
-            f = build_ward_features(
-                ward_number=f"W-{i+1:03d}",
-                city=city,
-                lat=lat,
-                lon=lon,
-                recent_scans=recent_list,
-            )
-            features.append(f)
-
         return predict_hotspots(features)
-    except Exception:
+    except Exception as e:
+        logger.warning("get_predicted_hotspots fell back to mock: %s", e)
         return _mock_hotspots(city)
 
 

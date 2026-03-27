@@ -8,7 +8,6 @@ Pipeline:
 
 import os
 import sys
-import time
 from uuid import UUID
 
 from sqlalchemy.orm import Session
@@ -17,7 +16,7 @@ from app.config import settings
 from app.models.scan import Scan
 from app.models.waste_category import WasteCategory
 from app.services.rag_service import get_disposal_advice
-from app.utils.image_utils import save_upload, annotated_path
+from app.utils.image_utils import annotated_path
 
 # Add ml-models to path — ML_MODELS_PATH env var takes priority (set in docker-compose)
 sys.path.insert(
@@ -58,9 +57,14 @@ def _find_dominant_category(detections: list, db: Session) -> int | None:
     return cat.id if cat else None
 
 
-async def process_scan(scan_id: UUID, db: Session):
+def process_scan(scan_id: UUID, db: Session):
     """
     Background task: run YOLO + RAG pipeline and update scan record.
+
+    Defined as a plain synchronous function so FastAPI BackgroundTasks dispatches it
+    via anyio.to_thread.run_sync() — the entire pipeline (YOLO, RAG, DB writes) runs
+    in a worker thread and never touches the event loop.  Two concurrent uploads will
+    therefore not block each other or the dashboard.
     """
     scan = db.query(Scan).filter(Scan.id == scan_id).first()
     if not scan:
@@ -70,27 +74,25 @@ async def process_scan(scan_id: UUID, db: Session):
     db.commit()
 
     try:
-        # Step 1: Run YOLO inference
-        try:
-            from yolo.inference import run_inference
-            ann_path = annotated_path(scan.image_path)
+        # Step 1: Run YOLO inference (synchronous — safe here, we are in a worker thread)
+        from yolo.inference import has_real_model, run_inference, mock_inference
+        ann_path = annotated_path(scan.image_path)
+        if has_real_model():
             detections, yolo_ms = run_inference(
                 image_path=scan.image_path,
-                model_path=settings.yolo_model_path,
+                model_path=None,
                 conf=settings.yolo_conf_threshold,
                 iou=settings.yolo_iou_threshold,
                 annotated_output_path=ann_path,
             )
-        except (FileNotFoundError, RuntimeError):
-            # Model not trained yet - use mock
-            from yolo.inference import mock_inference
+        else:
             detections, yolo_ms = mock_inference(scan.image_path)
             ann_path = scan.image_path
 
         # Step 2: Compute urgency
         urgency = _compute_urgency(detections)
 
-        # Step 3: Get RAG disposal advice
+        # Step 3: Get RAG disposal advice (synchronous — safe here, we are in a worker thread)
         class_names = list({d.class_name for d in detections})
         city = "Unknown"
         if scan.user_id:

@@ -1,16 +1,27 @@
-# YOLOv11-seg Training Hyperparameters
-# Member 1 (AI/Vision Lead) - adjust for your GPU
+# YOLOv11-seg Training Hyperparameters — EcoStream AI
+# Member 1 (AI/Vision Lead) owns this file.
+#
+# CPU-optimised settings (no GPU detected).
+# Expected training time on a modern CPU:
+#   ~600 images, 50 epochs, imgsz=416 → ~3–5 hours
+#   ~1500 images, 50 epochs, imgsz=416 → ~8–12 hours
+# Run overnight and pick up best.pt in the morning.
 
-model: yolo11n-seg.pt   # start from pretrained nano-seg checkpoint
+model: yolo11n-seg.pt   # nano-seg pretrained checkpoint (downloads automatically ~6 MB)
 data: ml-models/yolo/config/dataset.yaml
 
-epochs: 100
-imgsz: 640
-batch: 16          # reduce to 8 if GPU OOM
-workers: 4
-device: 0          # GPU 0; use 'cpu' if no GPU
+# ── Training schedule ──────────────────────────────────────────────────────
+epochs: 50              # sufficient for transfer learning; increase to 100 if mAP<0.5
+patience: 15            # early stopping if no improvement for 15 epochs
+imgsz: 416              # smaller than 640 → ~2x faster on CPU with minimal accuracy loss
+batch: 4                # fits comfortably in 8 GB RAM on CPU
+workers: 0              # MUST be 0 on Windows to avoid multiprocessing spawn errors
+cache: false            # set to true if you have >16 GB RAM (loads images into RAM)
 
-# Augmentation
+# ── Device ────────────────────────────────────────────────────────────────
+device: cpu             # change to 0 (or 'cuda:0') if NVIDIA GPU becomes available
+
+# ── Augmentation (keep moderate for small dataset) ────────────────────────
 hsv_h: 0.015
 hsv_s: 0.7
 hsv_v: 0.4
@@ -20,9 +31,9 @@ scale: 0.5
 flipud: 0.0
 fliplr: 0.5
 mosaic: 1.0
-mixup: 0.1
+mixup: 0.0              # disabled on CPU — too slow with batch=4
 
-# Optimization
+# ── Optimiser ─────────────────────────────────────────────────────────────
 optimizer: AdamW
 lr0: 0.001
 lrf: 0.01
@@ -30,11 +41,14 @@ momentum: 0.937
 weight_decay: 0.0005
 warmup_epochs: 3.0
 
-# Save
+# ── Output ────────────────────────────────────────────────────────────────
 project: runs/segment
 name: ecostream_waste
-save_period: 10
+save_period: 10         # save checkpoint every 10 epochs
 exist_ok: true
+plots: true             # generate confusion matrix + F1 curves
 
-# Target metrics (Indian clustered waste)
-# mAP@50 > 0.55 is acceptable for demo; > 0.70 is publication-ready
+# ── Target metrics (Indian clustered waste) ───────────────────────────────
+# mAP@50 > 0.45 = acceptable for demo
+# mAP@50 > 0.55 = good for IEEE paper
+# mAP@50 > 0.70 = publication-ready (needs GPU + full dataset + 100 epochs)

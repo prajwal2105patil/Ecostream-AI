@@ -28,14 +28,19 @@ def heatmap_summary(
     _=Depends(require_admin),
 ):
     from app.models.scan import Scan
+    from app.services.heatmap_service import _city_bbox
     from sqlalchemy import func
     start = datetime.utcnow() - timedelta(days=days)
-    total = db.query(func.count(Scan.id)).filter(
-        Scan.scan_status == "done", Scan.created_at >= start
-    ).scalar()
-    avg_urgency = db.query(func.avg(Scan.urgency_score)).filter(
-        Scan.scan_status == "done", Scan.created_at >= start
-    ).scalar()
+    bbox = _city_bbox(city)
+    filters = [Scan.scan_status == "done", Scan.created_at >= start]
+    if bbox:
+        filters += [
+            Scan.latitude  >= bbox["lat_min"], Scan.latitude  <= bbox["lat_max"],
+            Scan.longitude >= bbox["lon_min"], Scan.longitude <= bbox["lon_max"],
+        ]
+    base = db.query(Scan).filter(*filters)
+    total = base.with_entities(func.count(Scan.id)).scalar()
+    avg_urgency = base.with_entities(func.avg(Scan.urgency_score)).scalar()
     return {
         "city": city,
         "days": days,

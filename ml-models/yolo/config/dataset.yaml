@@ -1,7 +1,10 @@
-# EcoStream AI - Indian Waste Dataset Configuration
-# Member 1 (AI/Vision Lead) manages this file
+# EcoStream AI — Indian Waste Dataset Configuration
+# Member 1 (AI/Vision Lead) manages this file.
+#
+# Path is relative to the project root (d:/Smart Waste Management/).
+# Run train.py from the project root so YOLO resolves paths correctly.
 
-path: data/processed
+path: data/processed     # dataset root (relative to project root)
 train: train/images
 val: val/images
 test: test/images

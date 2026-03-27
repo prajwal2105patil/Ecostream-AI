@@ -50,7 +50,8 @@ async def rag_query(
         question = context_prefix + body.follow_up_question
 
     async def stream_response():
-        advice, sources = get_disposal_advice(class_names, city)
+        from starlette.concurrency import run_in_threadpool
+        advice, sources = await run_in_threadpool(get_disposal_advice, class_names, city)
         # Stream word by word for SSE effect
         for word in advice.split(" "):
             yield f"data: {json.dumps({'token': word + ' '})}\n\n"

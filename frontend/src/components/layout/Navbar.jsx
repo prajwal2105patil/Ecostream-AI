@@ -49,14 +49,14 @@ export default function Navbar() {
                   Logout
                 </button>
               </div>
-            ) : (
+            ) : pathname !== "/login" ? (
               <Link
                 to="/login"
                 className="ml-4 bg-white text-green-800 font-semibold text-sm px-4 py-1.5 rounded-md hover:bg-green-50"
               >
                 Login
               </Link>
-            )}
+            ) : null}
           </div>
 
           {/* Mobile hamburger */}
@@ -85,11 +85,11 @@ export default function Navbar() {
             <button onClick={logout} className="w-full text-left text-green-100 px-3 py-2 text-sm">
               Logout ({user.username})
             </button>
-          ) : (
+          ) : pathname !== "/login" ? (
             <Link to="/login" className="block text-green-100 px-3 py-2 text-sm" onClick={() => setOpen(false)}>
               Login
             </Link>
-          )}
+          ) : null}
         </div>
       )}
     </nav>

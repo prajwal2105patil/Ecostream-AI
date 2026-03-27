@@ -62,10 +62,14 @@ export default function Login() {
         </div>
 
         {/* Tab */}
-        <div className="flex rounded-lg overflow-hidden border mb-6">
+        <div className="flex rounded-lg overflow-hidden border mb-6" role="tablist" aria-label="Authentication options">
           {["login", "register"].map((t) => (
             <button
               key={t}
+              role="tab"
+              aria-selected={tab === t}
+              aria-controls={`panel-${t}`}
+              id={`tab-${t}`}
               onClick={() => setTab(t)}
               className={`flex-1 py-2 text-sm font-medium transition-colors ${
                 tab === t ? "bg-green-600 text-white" : "bg-white text-gray-600 hover:bg-gray-50"
@@ -79,7 +83,7 @@ export default function Login() {
         <ErrorBanner message={error} onDismiss={() => setError("")} />
 
         {tab === "login" ? (
-          <form onSubmit={handleLogin} className="space-y-4 mt-4">
+          <form id="panel-login" role="tabpanel" aria-labelledby="tab-login" onSubmit={handleLogin} className="space-y-4 mt-4">
             <input
               type="email" placeholder="Email" value={email}
               onChange={(e) => setEmail(e.target.value)} required
@@ -96,9 +100,12 @@ export default function Login() {
             >
               {loading ? "Signing in..." : "Sign In"}
             </button>
+            <p className="text-center text-xs text-gray-400 mt-1">
+              Forgot password? Contact your administrator.
+            </p>
           </form>
         ) : (
-          <form onSubmit={handleRegister} className="space-y-4 mt-4">
+          <form id="panel-register" role="tabpanel" aria-labelledby="tab-register" onSubmit={handleRegister} className="space-y-4 mt-4">
             <input
               type="text" placeholder="Username" value={username}
               onChange={(e) => setUsername(e.target.value)} required

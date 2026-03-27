@@ -3,7 +3,7 @@ RAG Chain Builder
 Member 2 (LLM/NLP Lead) — Prajwal Patil owns this file.
 
 LLM LOCKED per CLAUDE.md R7:  Groq · llama-3.1-8b-instant · temp 0.2
-Hallucination guard per R4:   similarity < 0.40 → HARDCODED_FALLBACK
+Hallucination guard per R4:   similarity < 0.20 → HARDCODED_FALLBACK
 """
 
 import os
@@ -19,7 +19,7 @@ from rag.prompt_templates import WASTE_ADVICE_PROMPT
 
 _chain_cache: Optional[object] = None
 
-# R4 — Hardcoded fallback when similarity score < 0.65
+# R4 — Hardcoded fallback when similarity score < 0.20 (SIMILARITY_THRESHOLD)
 HARDCODED_FALLBACK = (
     "I could not find specific guidelines for this waste type in my knowledge base. "
     "As a safe default under Indian SWM Rules 2016:\n"
@@ -29,7 +29,9 @@ HARDCODED_FALLBACK = (
     "Contact your local municipal body (BBMP/MCD/MCGM) for specific instructions."
 )
 
-SIMILARITY_THRESHOLD = 0.40
+# Empirical gap: relevant waste queries score 0.30–0.40; out-of-domain score negative.
+# 0.20 cleanly separates the two without over-filtering borderline waste terms.
+SIMILARITY_THRESHOLD = 0.20
 
 
 def get_embeddings():
@@ -58,16 +60,34 @@ def build_rag_chain(persist_dir: str, groq_api_key: str = ""):
         embedding_function=embeddings,
         collection_name="waste_knowledge",
     )
-    retriever = vectorstore.as_retriever(
-        search_type="similarity",
-        search_kwargs={"k": 4},
-    )
     llm = _get_llm(groq_api_key)
     answer_chain = WASTE_ADVICE_PROMPT | llm | StrOutputParser()
 
     def _retrieve_and_answer(inputs: dict) -> dict:
+        """
+        R4 Hallucination Guard (manual score filter).
+
+        LangChain's similarity_score_threshold is unreliable with ChromaDB —
+        negative-scored docs bypass the filter. We use
+        similarity_search_with_relevance_scores directly, apply SIMILARITY_THRESHOLD
+        ourselves, and short-circuit BEFORE the LLM call when no docs pass.
+
+        Empirical score ranges observed:
+          Relevant waste queries   : 0.30 – 0.40
+          Out-of-domain queries    : negative (< 0)
+          SIMILARITY_THRESHOLD=0.20: clean separation with headroom on both sides.
+        """
         query = inputs["query"]
-        source_docs = retriever.invoke(query)
+        try:
+            scored = vectorstore.similarity_search_with_relevance_scores(query, k=4)
+            source_docs = [doc for doc, score in scored if score >= SIMILARITY_THRESHOLD]
+        except Exception:
+            source_docs = []
+
+        # Short-circuit: no relevant docs → skip LLM entirely to prevent hallucination
+        if not source_docs:
+            return {"result": None, "source_documents": []}
+
         context = "\n\n".join(doc.page_content for doc in source_docs)
         result = answer_chain.invoke({"context": context, "question": query})
         return {"result": result, "source_documents": source_docs}
@@ -83,6 +103,17 @@ def get_chain(persist_dir: str, groq_api_key: str = "", **kwargs):
     return _chain_cache
 
 
+# Layer 1 guard: all valid class names YOLO can produce.
+# Any class not in this set is either a non-YOLO input or API abuse.
+_VALID_WASTE_CLASSES = {
+    "plastic_pet_bottle", "plastic_bag", "plastic_wrapper", "glass_bottle",
+    "glass_broken", "paper_newspaper", "paper_cardboard", "metal_can",
+    "metal_scrap", "organic_food_waste", "organic_leaves", "e_waste_phone",
+    "e_waste_battery", "textile_cloth", "rubber_tire", "construction_debris",
+    "medical_waste_mask", "thermocol", "tetra_pak", "mixed_waste",
+}
+
+
 def query_waste_advice(
     detected_classes: list[str],
     city: str,
@@ -90,19 +121,29 @@ def query_waste_advice(
 ) -> tuple[str, list[str]]:
     """
     Query RAG chain. Returns (advice_text, source_chunks).
-    R4 guard: if no docs pass similarity threshold → HARDCODED_FALLBACK.
+
+    Two-layer R4 hallucination guard:
+      Layer 1 — class name whitelist: rejects non-YOLO / API-abuse input before
+                any DB or LLM call.
+      Layer 2 — similarity score filter in _retrieve_and_answer: rejects free-text
+                chat queries (SSE path) that have no relevant knowledge base matches.
     """
+    # Layer 1: drop any class names not from our 20-class YOLO model
+    valid_classes = [c for c in detected_classes if c in _VALID_WASTE_CLASSES]
+    if not valid_classes:
+        return HARDCODED_FALLBACK, []
+
     query = (
         f"Disposal advice for the following waste items detected in {city}, India: "
-        + ", ".join(detected_classes)
+        + ", ".join(valid_classes)
     )
     result = chain.invoke({"query": query})
     source_docs = result.get("source_documents", [])
 
-    # R4 hallucination guard
+    # Layer 2: triggers when _retrieve_and_answer found no docs above score threshold
     if not source_docs:
         return HARDCODED_FALLBACK, []
 
-    answer = result.get("result", HARDCODED_FALLBACK)
+    answer = result.get("result") or HARDCODED_FALLBACK
     sources = [doc.page_content[:200] for doc in source_docs]
     return answer, sources
