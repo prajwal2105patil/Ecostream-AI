@@ -26,7 +26,9 @@ data/processed/
 data/uploads/
 data/chroma_db/
 data/chroma_experiment/
+data/gan_seeds/
 ml-models/yolo/weights/*.pt
+ml-models/gan/weights/*.pt
 runs/
 yolo11n-seg.pt
 
