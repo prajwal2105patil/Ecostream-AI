@@ -24,7 +24,7 @@ from pathlib import Path
 # ==========================================================================
 
 # Model architecture
-MODEL_VARIANT = "yolo11n-seg.pt"      # yolo11n-seg | yolo11s-seg | yolo11m-seg
+MODEL_VARIANT = "yolo11s-seg.pt"      # yolo11n-seg | yolo11s-seg | yolo11m-seg
 
 # Image & batch
 IMGSZ      = 416                       # 416 balances speed vs accuracy on CPU

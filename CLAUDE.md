@@ -19,3 +19,26 @@ It solves the real Indian urban waste problem: **clustered/mixed waste** through
 **Core Constraint**: No feature outside the three engines until all three are production-ready and tested.
 
 ## TEAM MAP (Paired Ownership – Redundancy Model)
+
+| Member | Name | Role | Owns |
+|--------|------|------|------|
+| M1a | Prajwal Patil | AI/Vision Lead (YOLO + RAG) | `ml-models/yolo/`, `ml-models/rag/`, `backend/app/services/rag_service.py`, `data/knowledge_base/` |
+| M1b | Mahantesh | AI/Vision Lead (GAN) | `ml-models/gan/` |
+| M3  | Prakash | Backend Architect | `backend/app/` (models, routers, scan_service, alembic, Docker) |
+| M4  | TBD | Frontend Developer | `frontend/src/` |
+| M5  | TBD | Research & Analytics | `ml-models/analytics/`, `backend/app/services/{heatmap,analytics,route}_service.py`, IEEE paper |
+
+### Redundancy Pairs
+- M1a backs up M1b (both understand the full Vision pipeline end-to-end)
+- M3 backs up M1a on scan_service.py integration
+- M5 owns all paper metrics — must have access to all three engine outputs
+
+### GAN Reproducibility Note
+`data/gan_seeds/` and `ml-models/gan/weights/*.pt` are gitignored (large binaries).
+To regenerate on a new machine:
+```bash
+python ml-models/gan/download_seeds.py   # ~5 min
+python ml-models/gan/train_gan.py        # ~25 min CPU
+python ml-models/gan/generate.py         # ~1 min
+```
+
