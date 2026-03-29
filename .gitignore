@@ -25,7 +25,10 @@ data/raw/
 data/processed/
 data/uploads/
 data/chroma_db/
+data/chroma_experiment/
 ml-models/yolo/weights/*.pt
+runs/
+yolo11n-seg.pt
 
 # IDE
 .idea/

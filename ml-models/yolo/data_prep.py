@@ -3,7 +3,7 @@ Dataset Preparation Script
 Member 1 (AI/Vision Lead) owns this file.
 
 Converts COCO-format annotations (TACO dataset) to YOLO segmentation format.
-Maps TACO's 60 categories → EcoStream AI's 20 Indian waste classes.
+Maps TACO's 60 categories -> EcoStream AI's 20 Indian waste classes.
 Also handles train/val/test split.
 
 Usage:
@@ -24,9 +24,9 @@ import random
 from pathlib import Path
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # EcoStream AI class index reference (matches dataset.yaml)
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # 0  plastic_pet_bottle
 # 1  plastic_bag
 # 2  plastic_wrapper
@@ -47,13 +47,13 @@ from pathlib import Path
 # 17 thermocol
 # 18 tetra_pak
 # 19 mixed_waste
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 
-# Maps TACO category name (lowercase, stripped) → our 0-indexed class ID
+# Maps TACO category name (lowercase, stripped) -> our 0-indexed class ID
 # Classes with no TACO equivalent are omitted (organic_leaves=10, e_waste_phone=11,
-# rubber_tire=14, construction_debris=15 — supplement from other datasets later)
+# rubber_tire=14, construction_debris=15 -- supplement from other datasets later)
 TACO_TO_ECOSTREAM: dict[str, int] = {
-    # ── Plastics ──────────────────────────────────────────────────────────
+    # -- Plastics ----------------------------------------------------------
     "clear plastic bottle":          0,   # plastic_pet_bottle
     "other plastic bottle":          0,
     "milk bottle":                   0,
@@ -77,13 +77,13 @@ TACO_TO_ECOSTREAM: dict[str, int] = {
     "aluminium blister pack":        2,   # close enough to wrapper category
     "other plastic":                 2,
     "other plastic container":       2,
-    # ── Glass ─────────────────────────────────────────────────────────────
+    # -- Glass -------------------------------------------------------------
     "glass bottle":                  3,   # glass_bottle
     "glass jar":                     3,
     "other glass":                   3,
     "broken glass":                  4,   # glass_broken
     "glass cup":                     4,
-    # ── Paper ─────────────────────────────────────────────────────────────
+    # -- Paper -------------------------------------------------------------
     "newspaper":                     5,   # paper_newspaper
     "normal paper":                  5,
     "magazine":                      5,
@@ -97,7 +97,7 @@ TACO_TO_ECOSTREAM: dict[str, int] = {
     "egg carton":                    6,
     "box":                           6,
     "paper cup":                     6,
-    # ── Metal ─────────────────────────────────────────────────────────────
+    # -- Metal -------------------------------------------------------------
     "drink can":                     7,   # metal_can
     "food can":                      7,
     "cans":                          7,
@@ -110,28 +110,28 @@ TACO_TO_ECOSTREAM: dict[str, int] = {
     "lid (metal, not for bottle)":   7,
     "scrap metal":                   8,   # metal_scrap
     "other metal":                   8,
-    # ── Organic ───────────────────────────────────────────────────────────
+    # -- Organic -----------------------------------------------------------
     "food waste":                    9,   # organic_food_waste
     "food":                          9,
-    # ── E-waste ───────────────────────────────────────────────────────────
+    # -- E-waste -----------------------------------------------------------
     "battery":                       12,  # e_waste_battery
-    # ── Textile ───────────────────────────────────────────────────────────
+    # -- Textile -----------------------------------------------------------
     "clothing":                      13,  # textile_cloth
     "shoe":                          13,
     "rope & strings":                13,
     "rope":                          13,
-    # ── Medical / PPE ─────────────────────────────────────────────────────
+    # -- Medical / PPE -----------------------------------------------------
     "plastic gloves":                16,  # medical_waste_mask
     "disposable glove":              16,
     "gloves":                        16,
-    # ── Thermocol / Styrofoam ─────────────────────────────────────────────
+    # -- Thermocol / Styrofoam ---------------------------------------------
     "styrofoam piece":               17,  # thermocol
     "expanded polystyrene":          17,
-    # ── Tetra Pak ─────────────────────────────────────────────────────────
+    # -- Tetra Pak ---------------------------------------------------------
     "drink carton":                  18,  # tetra_pak
     "milk carton":                   18,
     "juice carton":                  18,
-    # ── Mixed / Unclassified ──────────────────────────────────────────────
+    # -- Mixed / Unclassified ----------------------------------------------
     "unlabeled litter":              19,  # mixed_waste
     "cigarette":                     19,
     "cup":                           19,
@@ -157,7 +157,7 @@ def _normalize_cat_name(name: str) -> str:
 
 def build_cat_id_to_class(categories: list[dict]) -> dict[int, int]:
     """
-    Build mapping: TACO category_id (int) → EcoStream class_id (0-indexed int).
+    Build mapping: TACO category_id (int) -> EcoStream class_id (0-indexed int).
     Categories not in TACO_TO_ECOSTREAM are mapped to mixed_waste (19) as fallback.
     """
     mapping = {}
@@ -172,7 +172,7 @@ def build_cat_id_to_class(categories: list[dict]) -> dict[int, int]:
             unmapped.append(cat["name"])
 
     if unmapped:
-        print(f"  [INFO] {len(unmapped)} TACO categories → mixed_waste (19): {unmapped[:8]}{'...' if len(unmapped)>8 else ''}")
+        print(f"  [INFO] {len(unmapped)} TACO categories -> mixed_waste (19): {unmapped[:8]}{'...' if len(unmapped)>8 else ''}")
 
     # Print class distribution summary
     from collections import Counter
@@ -185,7 +185,7 @@ def build_cat_id_to_class(categories: list[dict]) -> dict[int, int]:
         "construction_debris","medical_waste_mask","thermocol","tetra_pak","mixed_waste"
     ]
     for cls_id in sorted(dist):
-        print(f"    {cls_id:2d} {class_names[cls_id]:<25} ← {dist[cls_id]} TACO categories")
+        print(f"    {cls_id:2d} {class_names[cls_id]:<25} <- {dist[cls_id]} TACO categories")
 
     return mapping
 
@@ -204,7 +204,7 @@ def coco_to_yolo_seg(
         data = json.load(f)
 
     # Build category mapping
-    print(f"Building TACO → EcoStream category mapping ({len(data['categories'])} categories)...")
+    print(f"Building TACO -> EcoStream category mapping ({len(data['categories'])} categories)...")
     cat_id_to_class = build_cat_id_to_class(data["categories"])
 
     # Build image lookup
@@ -291,10 +291,10 @@ def coco_to_yolo_seg(
                 lbl_file.write_text("\n".join(label_lines))
                 written += 1
 
-        print(f"  [{split:<5}] {written} label files written → {lbl_out}")
+        print(f"  [{split:<5}] {written} label files written -> {lbl_out}")
 
-    print(f"\n[✓] Dataset prepared at {out}")
-    print(f"\nNext step — start training:")
+    print(f"\n[OK] Dataset prepared at {out}")
+    print(f"\nNext step -- start training:")
     print("  python ml-models/yolo/train.py")
 
 

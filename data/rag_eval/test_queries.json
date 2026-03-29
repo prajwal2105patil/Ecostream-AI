@@ -1,0 +1,128 @@
+[
+  {
+    "query": "How should I dispose of PET plastic bottles in Bangalore?",
+    "expected_classes": ["plastic_pet_bottle"],
+    "expected_keywords": ["blue bin", "dry waste", "recyclable", "MRF"],
+    "expected_source_docs": ["plastic_disposal.txt", "bbmp_rules.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "What is the correct way to dispose of used cooking oil and food scraps?",
+    "expected_classes": ["organic_food_waste"],
+    "expected_keywords": ["green bin", "wet waste", "compost"],
+    "expected_source_docs": ["organic_composting.txt", "swm_rules_2016.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "I found old mobile phones and batteries. How to dispose of e-waste in India?",
+    "expected_classes": ["e_waste_phone", "e_waste_battery"],
+    "expected_keywords": ["hazardous", "red bin", "authorised recycler", "e-waste"],
+    "expected_source_docs": ["e_waste_india.txt", "swm_rules_2016.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "How to handle broken glass safely and dispose of it?",
+    "expected_classes": ["glass_broken"],
+    "expected_keywords": ["dry waste", "wrap", "blue bin", "glass"],
+    "expected_source_docs": ["glass_metal_paper_disposal.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "What are the penalties for not segregating waste under SWM Rules 2016?",
+    "expected_classes": ["mixed_waste"],
+    "expected_keywords": ["penalty", "fine", "SWM Rules", "segregat"],
+    "expected_source_docs": ["swm_rules_2016.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "How to dispose of old newspapers and cardboard boxes?",
+    "expected_classes": ["paper_newspaper", "paper_cardboard"],
+    "expected_keywords": ["dry waste", "blue bin", "kabadiwala", "recyclable"],
+    "expected_source_docs": ["glass_metal_paper_disposal.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "What should I do with used metal cans and aluminium foil?",
+    "expected_classes": ["metal_can"],
+    "expected_keywords": ["dry waste", "blue bin", "metal", "recyclable"],
+    "expected_source_docs": ["glass_metal_paper_disposal.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "How to start composting kitchen waste at home in India?",
+    "expected_classes": ["organic_food_waste"],
+    "expected_keywords": ["compost", "green bin", "khamba", "vermi"],
+    "expected_source_docs": ["organic_composting.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "How to dispose of used face masks and medical gloves?",
+    "expected_classes": ["medical_waste_mask"],
+    "expected_keywords": ["biomedical", "hazardous", "red bin"],
+    "expected_source_docs": ["hazardous_biomedical_waste.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "What is the BBMP waste collection schedule in Bangalore?",
+    "expected_classes": ["mixed_waste"],
+    "expected_keywords": ["BBMP", "collection", "Bangalore", "schedule"],
+    "expected_source_docs": ["bbmp_rules.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "How to dispose of tetra pak juice cartons?",
+    "expected_classes": ["tetra_pak"],
+    "expected_keywords": ["dry waste", "recyclable", "rinse"],
+    "expected_source_docs": ["glass_metal_paper_disposal.txt", "plastic_disposal.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "I have old clothes and textile scraps. What do I do with them?",
+    "expected_classes": ["textile_cloth"],
+    "expected_keywords": ["dry waste", "donate", "textile"],
+    "expected_source_docs": ["glass_metal_paper_disposal.txt"],
+    "relevance_tier": "high"
+  },
+  {
+    "query": "Can I mix thermocol packaging with regular plastic for recycling?",
+    "expected_classes": ["thermocol", "plastic_wrapper"],
+    "expected_keywords": ["styrofoam", "dry waste", "not recyclable"],
+    "expected_source_docs": ["plastic_disposal.txt"],
+    "relevance_tier": "cross_domain"
+  },
+  {
+    "query": "How to handle construction debris mixed with scrap metal in a residential area?",
+    "expected_classes": ["construction_debris", "metal_scrap"],
+    "expected_keywords": ["debris", "construction", "separate"],
+    "expected_source_docs": ["swm_rules_2016.txt", "glass_metal_paper_disposal.txt"],
+    "relevance_tier": "cross_domain"
+  },
+  {
+    "query": "If I find expired medicines and used syringes at home, how to safely dispose?",
+    "expected_classes": ["medical_waste_mask"],
+    "expected_keywords": ["hazardous", "biomedical", "red bin", "pharmacy"],
+    "expected_source_docs": ["hazardous_biomedical_waste.txt"],
+    "relevance_tier": "cross_domain"
+  },
+  {
+    "query": "What is the weather forecast for Mumbai tomorrow?",
+    "expected_classes": [],
+    "expected_keywords": [],
+    "expected_source_docs": [],
+    "relevance_tier": "out_of_domain"
+  },
+  {
+    "query": "Who won the cricket match between India and Australia?",
+    "expected_classes": [],
+    "expected_keywords": [],
+    "expected_source_docs": [],
+    "relevance_tier": "out_of_domain"
+  },
+  {
+    "query": "Tell me about the political situation in Karnataka elections.",
+    "expected_classes": [],
+    "expected_keywords": [],
+    "expected_source_docs": [],
+    "relevance_tier": "out_of_domain"
+  }
+]
